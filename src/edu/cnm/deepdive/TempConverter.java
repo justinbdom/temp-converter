@@ -12,6 +12,7 @@ public class TempConverter {
   }
 
   private static void convert(Scanner scanner) {
+    try {
       String line;
       while (!(line = scanner.nextLine().trim()).isEmpty()) {
         char finalChar = line.toUpperCase().charAt(line.length() - 1);
@@ -24,6 +25,8 @@ public class TempConverter {
 
         }
       }
+    } catch (NoSuchElementException expected) {
+    }
 
 
   }
